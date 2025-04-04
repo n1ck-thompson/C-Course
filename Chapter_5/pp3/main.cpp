@@ -23,7 +23,11 @@ void output(int& currentHours, int & currentMinutes, int & hoursToWait, int & mi
             if (character == 'a'||character == 'A') character = 'P';
             else character = 'A';
         };
-        newHours%=12;}
+        newHours%=12;
+    if (newHours == 0) {
+        newHours += 12;
+    }
+    }
     cout<<"\n The time after waiting will be " <<newHours<<":"<<newMinutes<<character<<"M.";
 };
 

@@ -33,6 +33,7 @@ void getInputes(int& day, int & month, int &year) {
     cout << "Enter the date as DD MM YYYY.\nIf you prefer to enter the date as DD Month YYYY, type 0 and press enter:\t";
     cin >> day;
 
+
     if (day == 0) {
         cout<<"Enter the date as DD Month YYYY, then press enter:\t";
         cin>>day>>temp>>year;
@@ -59,6 +60,14 @@ int main() {
     do {
         int day = 0, month =0, year = 0;
         getInputes(day, month, year);
+        if (day < 1 || day > 31) {
+            cout << "Invalid date entered. Please enter again.\n";
+            break;
+        }
+        if (month < 1 || month > 12) {
+            cout << "Invalid month entered. Please enter again.\n";
+            break;
+        }
         int theDayNumber = (day + getCenturyValue(year) + getYearValue(year) + getMonthValue(month, year))%7;
         cout<<"\nThe corresponding day to this date is:\t";
         switch(theDayNumber) {

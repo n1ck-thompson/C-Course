@@ -12,8 +12,17 @@ void convert(int & hours, char & note) {
 };
 
 void output(int& hours, int & minutes, char & note) {
-    if (minutes < 10) cout << "\nThe equivalent time of "<<hours<<":0"<<minutes<<" in 12-hour notation is "<<hours%12<<":0"<<minutes<<" "<<note<<"M.";
-    else cout<<"\nThe equivalent time of "<<hours<<":"<<minutes<<" in 12-hour notation is "<<hours%12<<":"<<minutes<<" "<<note<<"M.";
+    if (minutes < 10)
+        if (hours == 0)
+            cout << "\nThe equivalent time of "<<"0"<<":0"<<minutes<<" in 12-hour notation is "<<"12"<<":0"<<minutes<<" "<<note<<"M.";
+        else
+            cout << "\nThe equivalent time of "<<hours<<":0"<<minutes<<" in 12-hour notation is "<<hours%12<<":0"<<minutes<<" "<<note<<"M.";
+    else
+        if (hours ==0)
+            cout<<"\nThe equivalent time of "<<"0"<<":"<<minutes<<" in 12-hour notation is "<<"12"<<":"<<minutes<<" "<<note<<"M.";
+        else
+            cout<<"\nThe equivalent time of "<<hours<<":"<<minutes<<" in 12-hour notation is "<<hours%12<<":"<<minutes<<" "<<note<<"M.";
+
 }
 
 int main() {

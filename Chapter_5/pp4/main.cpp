@@ -4,6 +4,9 @@ using namespace std;
 void input(int&amount_left) {
     cout<<" Enter an amount of money between 1 and 99 cents to get it as quarters, dimes, and pennies:\t";
 
+    cin>>amount_left;
+
+
 
 
 };
@@ -21,15 +24,24 @@ void output(int& num, int& amount_left) {
 
 };
 
-int main() {
-    bool loop = true;
+int main () {
+    bool loop;
     int num = 0, amount_left = 0;
     do {
         input(amount_left);
-        output(num, amount_left);
+        if (amount_left <= 0 || amount_left > 99) {
+            cout << "\n error, too many coins";
+            break;
+        }
+        else {
+            output(num, amount_left);
 
-        cout<<"\n Enter 1 to start over or 0 to quit:\t";
-        cin>>loop;
+            cout<<"\n Enter 1 to start over or 0 to quit:\t";
+            cin>>loop;
+
+        }
+
+
     } while(loop);
     return 0;
 }
