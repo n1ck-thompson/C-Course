@@ -16,14 +16,25 @@ void delete_repeats(char array[], int &size) {
 };
 
 int main() {
-    char a[10];
+    char a[12];
     a[0] = 'a';
     a[1] = 'b';
     a[2] = 'a';
     a[3] = 'c';
-    int size = 4;
+    a[4] = 'd';
+    a[5] = 'b';
+    a[6] = 'e';
+    a[7] = 'c';
+    a[8] = 'a';
+    a[9] = 'b';
+    a[10] = 'e';
+    a[11] = 'f';
+
+    int size = 12;
+
+    cout<<"The original array is {"; for (int i=0; i<size; i++) cout<<a[i]; cout<<"}. After applying the function the array is of size ";
     delete_repeats(a,size);
-    cout<<"after applying the function {'a', 'b', 'a', 'c'} is an array of size "<<size<<" and its values are {";
+    cout<<size<<" and its values are {";
     for (int i=0; i<size; ++i) cout<<a[i];
     cout<<"}.";
 

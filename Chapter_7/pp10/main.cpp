@@ -4,7 +4,7 @@ bool changeAndDisplay(char playingBoard[], char player, int selection) {
     playingBoard[selection-1] = player;
 
     for (int i = 0;i<3;++i) {
-        for (int j = 0; j<3;++j) cout<<playingBoard[i+3*j]<<" ";
+        for (int j = 0; j<3;++j) cout<<playingBoard[j+3*i]<<" ";
         cout<<"\n";
     };
 

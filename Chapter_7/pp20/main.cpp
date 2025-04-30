@@ -56,6 +56,7 @@ int main() {
 
         while (age<120 && randomNumber > deathProbFocusOn[age]) {
             randomNumber = static_cast<double>(rand())/RAND_MAX;
+            cout<<randomNumber;
             ++age;
         };
 
