@@ -1,0 +1,7 @@
+<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+<text x="10" y="20" font-size="16" font-family="Arial">Volume Comparison</text>
+<text x="10" y="60" font-size="14" font-family="Arial">Teaspoon (5 mL)</text>
+<text x="10" y="120" font-size="14" font-family="Arial">Tablespoon (15 mL)</text>
+<rect x="150" y="45" width="50" height="20" fill="skyblue" />
+<rect x="150" y="105" width="150" height="20" fill="orange" />
+</svg>
